@@ -1627,7 +1627,7 @@ public Action Event_RoundEnd(Event event, const char[] name, bool dontBroadcast)
     FindAliasFromCommand("sm_swap", swapCmd);
 
     if (g_DoVoteForKnifeRoundDecisionCvar.IntValue != 0) {
-      CreateTimer(20.0, Timer_HandleKnifeDecisionVote, _, TIMER_FLAG_NO_MAPCHANGE);
+      CreateTimer(30.0, Timer_HandleKnifeDecisionVote, _, TIMER_FLAG_NO_MAPCHANGE);
       PugSetup_MessageToAll("%t", "KnifeRoundWinnerVote", teamString, stayCmd, swapCmd);
     } else {
       PugSetup_MessageToAll("%t", "KnifeRoundWinner", teamString, stayCmd, swapCmd);
@@ -1695,7 +1695,7 @@ public void PrintSetupInfo(int client) {
     GetMapString(buffer, sizeof(buffer), g_MapType, client);
     PugSetup_Message(client, "%t: {GREEN}%s", "MapTypeOption", buffer);
   }
-    
+
   if (g_DisplayTeamSize || g_DisplayTeamType) {
     GetTeamString(buffer, sizeof(buffer), g_TeamType, client);
     PugSetup_Message(client, "%t: ({GREEN}%d vs %d{NORMAL}) {GREEN}%s", "TeamTypeOption",
