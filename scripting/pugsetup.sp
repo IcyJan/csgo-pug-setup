@@ -637,7 +637,7 @@ public Action Timer_CheckReady(Handle timer) {
           PrintHintTextToAll("%t\n%t", "ReadyStatusPlayers", readyPlayers, totalPlayers,
                              "ReadyStatusAllReadyVeto");
           PugSetup_MessageToAll("%t", "VetoMessage");
-          CreateTimer(2.0, MapSetup, _, TIMER_FLAG_NO_MAPCHANGE);
+          CreateTimer(1.0, MapSetup, _, TIMER_FLAG_NO_MAPCHANGE);
           return Plugin_Stop;
         } else {
           StatusHint(readyPlayers, totalPlayers);
@@ -648,7 +648,7 @@ public Action Timer_CheckReady(Handle timer) {
         PrintHintTextToAll("%t\n%t", "ReadyStatusPlayers", readyPlayers, totalPlayers,
                            "ReadyStatusAllReadyVote");
         PugSetup_MessageToAll("%t", "VoteMessage");
-        CreateTimer(2.0, MapSetup, _, TIMER_FLAG_NO_MAPCHANGE);
+        CreateTimer(1.0, MapSetup, _, TIMER_FLAG_NO_MAPCHANGE);
         return Plugin_Stop;
       }
     }
@@ -1695,7 +1695,7 @@ public void PrintSetupInfo(int client) {
     GetMapString(buffer, sizeof(buffer), g_MapType, client);
     PugSetup_Message(client, "%t: {GREEN}%s", "MapTypeOption", buffer);
   }
-
+    
   if (g_DisplayTeamSize || g_DisplayTeamType) {
     GetTeamString(buffer, sizeof(buffer), g_TeamType, client);
     PugSetup_Message(client, "%t: ({GREEN}%d vs %d{NORMAL}) {GREEN}%s", "TeamTypeOption",
@@ -1869,10 +1869,10 @@ public void StartGame() {
 public Action Timer_BeginMatch(Handle timer) {
   if (g_DoKnifeRound) {
     ChangeState(GameState_KnifeRound);
-    CreateTimer(3.0, StartKnifeRound, _, TIMER_FLAG_NO_MAPCHANGE);
+    CreateTimer(0.5, StartKnifeRound, _, TIMER_FLAG_NO_MAPCHANGE);
   } else {
     ChangeState(GameState_GoingLive);
-    CreateTimer(3.0, BeginLO3, _, TIMER_FLAG_NO_MAPCHANGE);
+    CreateTimer(0.5, BeginLO3, _, TIMER_FLAG_NO_MAPCHANGE);
   }
 }
 
