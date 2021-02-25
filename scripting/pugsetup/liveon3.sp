@@ -51,8 +51,8 @@ public Action Restart3(Handle timer) {
     return Plugin_Handled;
 
   PugSetup_MessageToAll("%t", "RestartCounter", 3);
-  RestartGame(3);
-  CreateTimer(3.1, MatchLive);
+  RestartGame(1);
+  CreateTimer(2.0, MatchLive);
 
   return Plugin_Handled;
 }
