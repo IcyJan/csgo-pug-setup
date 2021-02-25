@@ -328,4 +328,8 @@
 	{
 		"de"		"Wähle Map"
 	}
+	"PlayoutOption"
+	{
+		"de"		"Alle Runden spielen"
+	}
 }
