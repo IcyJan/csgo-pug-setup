@@ -332,4 +332,8 @@
 	{
 		"de"		"Alle Runden spielen"
 	}
+	"DamagePrintOption"
+	{
+		"de"		"Schaden anzeigen"
+	}
 }

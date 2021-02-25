@@ -1721,6 +1721,15 @@ public void PrintSetupInfo(int client) {
     GetEnabledString(buffer, sizeof(buffer), g_DoPlayout, client);
     PugSetup_Message(client, "%t: {GREEN}%s", "PlayoutOption", buffer);
   }
+
+  ConVar g_damageprint_con = FindConVar("sm_pugsetup_damageprint_enabled");
+  bool g_damageprint_enabled;
+  if (g_damageprint_con != null && g_damageprint_con.IntValue == 1) {
+    g_damageprint_enabled = true;
+  }
+
+  GetEnabledString(buffer, sizeof(buffer), g_damageprint_enabled, client);
+  PugSetup_Message(client, "%t: {GREEN}%s", "DamagePrintOption", buffer);
 }
 
 public void ReadyToStart() {
