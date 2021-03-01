@@ -206,11 +206,11 @@ Handle g_hOnWarmupCfg = INVALID_HANDLE;
 
 // clang-format off
 public Plugin myinfo = {
-    name = "CS:GO PugSetup",
-    author = "splewis",
+    name = "CS:GO PugSetup - experimental",
+    author = "splewis,Icy",
     description = "Tools for setting up pugs/10mans",
     version = PLUGIN_VERSION,
-    url = "https://github.com/splewis/csgo-pug-setup"
+    url = "https://github.com/IcyJan/csgo-pug-setup/tree/experimental"
 };
 // clang-format on
 
