@@ -1,5 +1,16 @@
-csgo-pug-setup
+csgo-pug-setup **experimental**
 ===========================
+**Experimental hacky modifications of pugsetup by splewis.**
+
+Changes:
+* shorter timer on 3rd lo3 restart
+* longer side pick timer
+* adding playout DE translation
+* adding damageprint to setup information
+
+
+
+</br></br></br>
 
 [![Build status](http://ci.splewis.net/job/csgo-pug-setup/badge/icon)](http://ci.splewis.net/job/csgo-pug-setup/)
 [![GitHub Downloads](https://img.shields.io/github/downloads/splewis/csgo-pug-setup/total.svg?style=flat-square&label=Downloads)](https://github.com/splewis/csgo-pug-setup/releases/latest)
